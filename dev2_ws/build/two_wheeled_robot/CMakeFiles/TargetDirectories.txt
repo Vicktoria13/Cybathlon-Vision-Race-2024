@@ -1,0 +1,9 @@
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/uninstall.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/two_wheeled_robot_uninstall.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/test.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/edit_cache.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/rebuild_cache.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/list_install_components.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/install.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/install/local.dir
+/home/victoria/dev2_ws/build/two_wheeled_robot/CMakeFiles/install/strip.dir

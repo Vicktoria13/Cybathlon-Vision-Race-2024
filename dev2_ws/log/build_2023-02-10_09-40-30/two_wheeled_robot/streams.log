@@ -1,0 +1,55 @@
+[0.012s] Invoking command in '/home/victoria/dev2_ws/build/two_wheeled_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/victoria/dev2_ws/build/two_wheeled_robot -- -j8 -l8
+[0.032s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.153s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.213s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.214s] -- Added test 'lint_cmake' to check CMake code style
+[0.214s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.216s] -- Added test 'xmllint' to check XML markup files
+[0.217s] -- Configuring done
+[0.222s] -- Generating done
+[0.223s] -- Build files have been written to: /home/victoria/dev2_ws/build/two_wheeled_robot
+[0.238s] Invoked command in '/home/victoria/dev2_ws/build/two_wheeled_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/victoria/dev2_ws/build/two_wheeled_robot -- -j8 -l8
+[0.255s] Invoking command in '/home/victoria/dev2_ws/build/two_wheeled_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/victoria/dev2_ws/build/two_wheeled_robot
+[0.260s] -- Install configuration: ""
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/config
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/launch
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/launch/two_wheeled_robot.launch.py
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/launch/launch_urdf_into_gazebo.launch.py
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/maps
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/Link_4.STL
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/Link_2.STL
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/robot_base.stl
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/Link_3.STL
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/Link_1.STL
+[0.260s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/meshes/Link5.STL
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/models
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/params
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/rviz
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/rviz/rviz_basic_settings.rviz
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/src
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/urdf
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/urdf/two_wheeled_robot_nav2.urdf
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/urdf/two_wheeled_robot.urdf
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds/piste
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds/piste/model.sdf
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds/piste/model.config
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds/model.world
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/worlds/neighborhood.world
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/ament_index/resource_index/package_run_dependencies/two_wheeled_robot
+[0.261s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/ament_index/resource_index/parent_prefix_path/two_wheeled_robot
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/environment/ament_prefix_path.sh
+[0.261s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/environment/ament_prefix_path.dsv
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/environment/path.sh
+[0.261s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/environment/path.dsv
+[0.261s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/local_setup.bash
+[0.262s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/local_setup.sh
+[0.262s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/local_setup.zsh
+[0.262s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/local_setup.dsv
+[0.262s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/package.dsv
+[0.262s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/ament_index/resource_index/packages/two_wheeled_robot
+[0.262s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/cmake/two_wheeled_robotConfig.cmake
+[0.262s] -- Up-to-date: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/cmake/two_wheeled_robotConfig-version.cmake
+[0.262s] -- Installing: /home/victoria/dev2_ws/install/two_wheeled_robot/share/two_wheeled_robot/package.xml
+[0.262s] Invoked command in '/home/victoria/dev2_ws/build/two_wheeled_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/victoria/dev2_ws/build/two_wheeled_robot

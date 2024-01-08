@@ -1,0 +1,726 @@
+
+
+<robot name="lawnmow">
+
+  <!-- * * * Link Definitions * * * -->
+
+    <link name="base_link">
+
+      <visual>
+
+        <geometry>      
+
+        <mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/frame.stl"/>
+
+        </geometry>
+
+        <origin rpy="1.55 0 0" xyz="0 0 -.050"/>
+
+        <material name="red">
+
+          <color rgba="1 0 0 1"/>
+
+        </material>
+
+      </visual> 
+
+    </link>
+
+    <link name="rr_wheel">
+
+      <visual>
+
+      <!-- origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+        <geometry>
+
+        <mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/wheel.stl"/>
+
+        </geometry>
+
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+
+        <material name="black">
+
+          <color rgba="0 0 0 1"/>
+
+        </material>
+
+      </visual> 
+
+    </link>
+
+    <link name="lr_wheel">
+
+      <visual>
+
+      <!-- origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+        <geometry>
+
+        <mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/wheel.stl"/>
+
+        </geometry>
+
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+
+        <material name="black">
+
+          <color rgba="0 0 0 1"/>
+
+        </material>
+
+      </visual> 
+
+    </link>
+
+    <link name="lf_wheel">
+
+      <visual>
+
+      <!--origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+        <geometry>
+
+        <mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/caster.stl"/>
+
+        </geometry>
+
+        <origin rpy="0 -1.55 0" xyz="0 0 0"/>
+
+        <material name="black">
+
+          <color rgba="1 0 0 1"/>
+
+        </material>
+
+      </visual> 
+
+    </link>
+
+    <link name="rf_wheel">
+
+      <visual>
+
+      <!--origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+        <geometry>
+
+        <mesh scale= ".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/caster.stl"/>
+
+        </geometry>
+
+        <origin rpy="0 -1.55 0" xyz="0 0 0"/>
+
+        <material name="black">
+
+          <color rgba="1 0 0 1"/>
+
+        </material>
+
+      </visual> 
+
+    </link>
+
+<!-- * * * Joint Definitions * * * -->
+
+ <joint name="rr_wheel_joint" type="continuous">
+
+     <parent link="base_link"/>
+
+     <child link="rr_wheel"/>
+
+     <origin xyz="0.04 0.12 .18" rpy="0 0 0"/>
+
+ </joint>
+
+ <joint name="lr_wheel_joint" type="continuous">
+
+     <parent link="base_link"/>
+
+     <child link="lr_wheel"/>
+
+     <origin xyz="-0.5 0.12 .18" rpy="0 0 0"/>
+
+ </joint>
+
+ <joint name="lf_wheel_joint" type="fixed">
+
+     <parent link="base_link"/>
+
+     <child link="lf_wheel"/>
+
+     <origin xyz="-0.4 0.605 .35" rpy=".1 0 3.1"/>
+
+ </joint>
+
+ <joint name="rf_wheel_joint" type="fixed">
+
+     <parent link="base_link"/>
+
+     <child link="rf_wheel"/>
+
+     <origin xyz="0.016 0.605 .35" rpy=".1 0 3.1"/>
+
+ </joint>
+
+</robot>
+
+
+This is without inertial and collision information.
+
+Proof! Melon Farmers.
+
+I believe that the inertial, collision, and gazebo control data should look like this:
+
+<robot name="lawnmow">
+
+<!-- * * * Link Definitions * * * -->
+
+<link name="base_link">
+
+<visual>
+
+<geometry> 
+
+<mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/frame.stl"/>
+
+</geometry>
+
+<origin rpy="1.55 0 0" xyz="0 0 -.050"/>
+
+<material name="red">
+
+<color rgba="1 0 0 1"/>
+
+</material>
+
+</visual>
+
+<collision>
+
+<origin rpy="1.55 0 0" xyz="0 0 -.050"/>
+
+<geometry>
+
+<box size="0.657359 0.4441 0.085"/>
+
+</geometry>
+
+</collision>
+
+<inertial>
+
+<mass value="18"/>
+
+<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+
+</inertial>
+
+</link>
+
+<link name="rr_wheel">
+
+<visual>
+
+<!-- origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+<geometry>
+
+<mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/wheel.stl"/>
+
+</geometry>
+
+<origin rpy="0 0 0" xyz="0 0 0"/>
+
+<material name="black">
+
+<color rgba="0 0 0 1"/>
+
+</material>
+
+</visual>
+
+<collision>
+
+<origin xyz="0.04 0.12 .18" rpy="1.58 0 0"/>
+
+<geometry>
+
+<cylinder radius="0.167022" length="0.07"/> 
+
+</geometry>
+
+</collision>
+
+<inertial>
+
+<mass value="1.5"/>
+
+<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+
+</inertial>
+
+</link>
+
+<link name="lr_wheel">
+
+<visual>
+
+<!-- origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+<geometry>
+
+<mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/wheel.stl"/>
+
+</geometry>
+
+<origin rpy="0 0 0" xyz="0 0 0"/>
+
+<material name="black">
+
+<color rgba="0 0 0 1"/>
+
+</material>
+
+</visual>
+
+<collision>
+
+<origin xyz="-0.5 0.12 .18" rpy="1.58 0 0"/>
+
+<geometry>
+
+<cylinder radius="0.167022" length="0.07"/> 
+
+</geometry>
+
+</collision>
+
+<inertial>
+
+<mass value="1.5"/>
+
+<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+
+</inertial>
+
+</link>
+
+<link name="lf_wheel">
+
+<visual>
+
+<!--origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+<geometry>
+
+<mesh scale=".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/caster.stl"/>
+
+</geometry>
+
+<origin rpy="0 -1.55 0" xyz="0 0 0"/>
+
+<material name="black">
+
+<color rgba="1 0 0 1"/>
+
+</material>
+
+</visual>
+
+<collision>
+
+<origin xyz="-0.4 0.605 .35" rpy="1.58 0 0"/>
+
+<geometry>
+
+<cylinder radius="0.167022" length="0.07"/> 
+
+</geometry>
+
+</collision>
+
+<inertial>
+
+<mass value="1.5"/>
+
+<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+
+</inertial>
+
+</link>
+
+<link name="rf_wheel">
+
+<visual>
+
+<!--origin xyz="0 0 0" rpy="1.58 0 0"/-->
+
+<geometry>
+
+<mesh scale= ".0010 .0010 .0010" filename="file://home/home/matt/lawnmow_ws/src/lawnmow_description/meshes/caster.stl"/>
+
+</geometry>
+
+<origin rpy="0 -1.55 0" xyz="0 0 0"/>
+
+<material name="black">
+
+<color rgba="1 0 0 1"/>
+
+</material>
+
+</visual>
+
+<collision>
+
+<origin xyz="0.016 0.605 .35" rpy="1.58 0 0"/>
+
+<geometry>
+
+<cylinder radius="0.167022" length="0.07"/> 
+
+</geometry>
+
+</collision>
+
+<inertial>
+
+<mass value="1.5"/>
+
+<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+
+</inertial>
+
+</link>
+
+<!-- * * * Joint Definitions * * * -->
+
+<joint name="rr_wheel_joint" type="continuous">
+
+<parent link="base_link"/>
+
+<child link="rr_wheel"/>
+
+<origin xyz="0.04 0.12 .18" rpy="0 0 0"/>
+
+</joint>
+
+<joint name="lr_wheel_joint" type="continuous">
+
+<parent link="base_link"/>
+
+<child link="lr_wheel"/>
+
+<origin xyz="-0.5 0.12 .18" rpy="0 0 0"/>
+
+</joint>
+
+<joint name="lf_wheel_joint" type="fixed">
+
+<parent link="base_link"/>
+
+<child link="lf_wheel"/>
+
+<origin xyz="-0.4 0.605 .35" rpy=".1 0 3.1"/>
+
+</joint>
+
+<joint name="rf_wheel_joint" type="fixed">
+
+<parent link="base_link"/>
+
+<child link="rf_wheel"/>
+
+<origin xyz="0.016 0.605 .35" rpy=".1 0 3.1"/>
+
+</joint>
+
+<gazebo>
+
+<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+
+<publish_tf>1</publish_tf>
+
+<left_wheel_joint_name>wheel_left_joint</left_wheel_joint_name>
+
+<right_wheel_joint_name>wheel_right_joint</right_wheel_joint_name>
+
+<wheel_separation>.4441</wheel_separation>
+
+<wheel_diameter>0.330896</wheel_diameter>
+
+<torque>180.0</torque>
+
+<velocity_command_timeout>0.6</velocity_command_timeout>
+
+<imu_name>imu</imu_name>
+
+</plugin>
+
+</gazebo>
+
+</robot>
+
+
+<?xml version="1.0" ?>
+
+<robot name="two_wheeled_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <!-- ****************** ROBOT BASE FOOTPRINT ***************************  -->
+  <!-- Define the center of the main robot chassis projected on the ground -->	
+  <link name="base_link"/>
+
+  <!-- The base footprint of the robot is located underneath the chassis -->
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="Link_1" />
+    <origin xyz="0.0 0.0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ****************** ROBOT CHASSIS **********************************  -->
+
+
+  <link name="Link_1">
+    <inertial>
+      <origin
+
+        xyz="-0.0199413257892108 -0.0326881010817097 -0.0539823305241484"
+        rpy="0 0 0" />
+        
+      <mass
+        value="0.389835137136689" />
+      <inertia
+        ixx="0.00015774241882171"
+        ixy="-4.33075851251135E-05"
+        ixz="6.02665925651826E-06"
+        iyy="0.000512996561655938"
+        iyz="-2.72377701348866E-06"
+        izz="0.000492177811827383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        
+          <mesh filename="file://$(find two_wheeled_robot)/meshes/Link_1.STL"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    
+  </link>
+
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+    <joint name="Joint_1_2" type="continuous">
+    <origin
+      xyz="0.029949 0.0017526 0"
+      rpy="0 0 0.53734" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+
+   <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0.0495702828045499 -1.71622438482899E-12 -0.0211645200627954"
+        rpy="0 0 0" />
+      <mass
+        value="0.0655866352340545" />
+      <inertia
+        ixx="6.38196817028964E-06"
+        ixy="1.01564332573474E-15"
+        ixz="1.29724738063705E-16"
+        iyy="0.000113847113994669"
+        iyz="-8.70169042332567E-17"
+        izz="0.000116612059752427" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find two_wheeled_robot)/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    
+  </link>
+
+
+   <joint
+    name="Joint_2_3"
+    type="revolute">
+    <origin
+      xyz="0.13 0 0"
+      rpy="0 0 2.0078" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 0 -1" />
+      <limit lower="0" upper="${pi/2}" velocity="100" effort="100"/>
+  </joint>
+ 
+
+
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.0681323965481278 2.99760216648792E-15 -0.0232121045572643"
+        rpy="0 0 0" />
+      <mass
+        value="0.020871872248541" />
+      <inertia
+        ixx="1.03086571713126E-06"
+        ixy="2.52521697400188E-20"
+        ixz="-1.2081360240033E-20"
+        iyy="2.75270107115966E-05"
+        iyz="7.70719318768475E-22"
+        izz="2.84221546645072E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find two_wheeled_robot)/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+   
+  </link>
+
+
+
+   <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="-0.0246615167632169 -0.000499829688404133 0.0276355679134506"
+        rpy="0 0 0" />
+      <mass
+        value="0.0660845351410077" />
+      <inertia
+        ixx="4.10506606098931E-05"
+        ixy="1.34672878617248E-07"
+        ixz="-5.68057512578542E-09"
+        iyy="6.47760548114758E-05"
+        iyz="9.57998852789668E-10"
+        izz="3.21605531286784E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find two_wheeled_robot)/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    
+  </link>
+
+
+<!-- Version ok sur rviz but not test on gazb-->
+
+  <joint
+    name="Joint3_4"
+    type="revolute">
+    <origin
+      xyz="0.14 0 0"
+      rpy="0 0 -2.2855" />
+    <parent
+      link="Link_3" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit lower="0" upper="${pi/2}" velocity="100" effort="100"/>
+  </joint>
+
+    <link
+    name="Link5">
+    <inertial>
+      <origin
+        xyz="-0.0810602801359899 -9.56942858287846E-13 -0.0211483179569884"
+        rpy="0 0 0" />
+      <mass
+        value="0.0650308643867626" />
+      <inertia
+        ixx="6.37467432310732E-06"
+        ixy="-5.75231297666946E-16"
+        ixz="5.50791399470628E-17"
+        iyy="0.000113839820147718"
+        iyz="-4.21084525637092E-17"
+        izz="0.000116600795160695" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find two_wheeled_robot)/meshes/Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    
+  </link>
+
+
+  <joint
+    name="Joint4_5"
+    type="continuous">
+    <origin
+      xyz="-0.14 0 0.003"
+      rpy="0 0 1.8962" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Link5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+    
+ 
+  
+</robot>
